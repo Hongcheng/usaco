@@ -2,6 +2,7 @@
 LANG:C++
 TASK:ariprog
 */
+
 #include <fstream>
 #include <iostream>
 #include <stdlib.h>
