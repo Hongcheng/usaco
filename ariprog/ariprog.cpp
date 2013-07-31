@@ -21,10 +21,10 @@ ofstream fout("ariprog.out");
  }
  int cmp1(const void* a,const void*b)
 {
-    if((*(result *)a).b!=(*(result *)b).b)
+    //if((*(result *)a).b!=(*(result *)b).b)
         return (*(result *)a).b>(*(result *)b).b?1:-1;
-    else
-        return (*(result *)a).a>(*(result *)b).a?1:-1;
+   // else
+     //   return (*(result *)a).a>(*(result *)b).a?1:-1;
 }
 
 int list[40001];

@@ -56,7 +56,7 @@ void milk3dfs(int a,int b,int c)
 }
 int main()
 {
-    cin >> va >> vb >> vc;
+    fin >> va >> vb >> vc;
     milk3dfs(0,0,vc);
     int i,num = 0;
     //cout << ans << endl;
@@ -76,10 +76,10 @@ int main()
     for(i = 0;i< num;i++)
     {
         if(i == 0)
-            cout << answer[i];
+            fout << answer[i];
         else
-            cout << " " << answer[i];
+            fout << " " << answer[i];
     }
-    cout << endl;
+    fout << endl;
     return 0;
 }

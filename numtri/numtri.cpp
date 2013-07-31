@@ -24,7 +24,7 @@ int main()
     {
         for(j = 0;j<=i;j++)
         {
-            cin >> num[i][j];
+            fin >> num[i][j];
         }
     }
     for(i = 1;i<R;i++)
@@ -34,17 +34,17 @@ int main()
             if(j == 0)
                 num[i][0] = num[i-1][0]+num[i][0];
             else if(j == i)
-                num[i][j] = num[i-1][j]+num[i][j];
+                num[i][j] = num[i-1][j-1]+num[i][j];
             else
                 num[i][j] = max(num[i-1][j-1],num[i-1][j]) + num[i][j];
         }
     }
     for(i = 0;i<R;i++)
     {
-        cout << num[R-1][i] << " ";
+        //cout << num[R-1][i] << " ";
         if(num[R-1][i] > maxnum)
             maxnum = num[R-1][i];
     }//cout << endl;
-    fout << maxnum;
+    fout << maxnum << endl;
     return 0;
 }
