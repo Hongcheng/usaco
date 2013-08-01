@@ -34,14 +34,26 @@ void dfs(int row,int *status)
             for(i = 0;i<row;i++)
             {
                 if(col & status[i])
+                {
                     flag = false;
+                    break;
+                }
             }
-            for(i = row-1;i>=0;i--)
+            if(flag)
             {
-                if(status[i]<<(row-i) & col)
-                    flag = false;
-                if(status[i]>>(row-i) & col)
-                    flag = false;
+                for(i = row-1;i>=0;i--)
+                {
+                    if(status[i]<<(row-i) & col)
+                    {
+                        flag = false;
+                        break;
+                    }
+                    if(status[i]>>(row-i) & col)
+                    {
+                        flag = false;
+                        break;
+                    }
+                }
             }
             if(flag)
             {
